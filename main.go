@@ -515,7 +515,7 @@ func (cfg *apiConfig) handlerPolkaWebhook(w http.ResponseWriter, r *http.Request
 		return
 	}
 
-	if apiKey != cfg.polka_key {
+	if apiKey != cfg.polkaKey {
 		log.Printf("apiKey does not match")
 		respondErr(w, 401, "unauthorized")
 		return
